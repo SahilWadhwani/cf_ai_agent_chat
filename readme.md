@@ -2,6 +2,8 @@
 
 > An AI-powered chat agent built on Cloudflare’s Agents SDK and Workers AI, with a lightweight React frontend.
 
+## Deployed Link - [https://cf-agent-frontend.pages.dev/](https://cf-agent-frontend.pages.dev/)
+
 
 -   **LLM**: Workers AI (`@cf/meta/llama-3.1-8b-instruct`, with a fallback to Mistral)
 -   **Workflow / Coordination**: Durable Object Agent (`MyAgent`) using the Agents SDK router
@@ -85,7 +87,7 @@ The dev server proxies `/agents` and `/tools` to the Worker (see `vite.config.ts
 **Open: `http://localhost:5173`**
 
   - Type a message and send, you should see the assistant’s response stream in.
-  - Click `Time` → enter a city (e.g., “London”) to see the tool in action.
+  - Click `Time` to enter a city (e.g., “London”) to see the tool in action.
 
 ### Quick cURL Tests
 
@@ -155,7 +157,7 @@ const MODEL_CANDIDATES = [
 
       - Minimal chat UI that preloads history on mount.
       - Parses SSE data frames from Workers AI to append text deltas.
-      - Includes a `⏰ Time` button to call the tool endpoint.
+      - Includes a ` Time` button to call the tool endpoint.
       - `vite.config.ts` proxies `/agents` and `/tools` to `http://localhost:8787` in dev.
 
 
